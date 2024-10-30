@@ -16,7 +16,7 @@ const App: React.FC = () => {
 	const [employee, setEmployee] = useState(sampleEmployee);
 
 	const getEmployee = () => {
-		fetch("https://randomuser.me/api?nat=en")
+		fetch("http://localhost:3310/api/employees")
 			.then((response) => response.json())
 			.then((data) => {
 				setEmployee(data.results[0]);
